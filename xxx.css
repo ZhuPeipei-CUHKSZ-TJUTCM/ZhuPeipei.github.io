@@ -1,62 +1,121 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>教师个人主页</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <!-- 头部 -->
-        <header class="header">
-            <div class="profile">
-                <img src="your-photo.jpg" alt="教师照片" class="profile-img">
-                <div class="profile-info">
-                    <h1>张三 教授</h1>
-                    <p>XX大学 计算机科学与技术学院</p>
-                    <p>研究领域：人工智能、机器学习、数据挖掘</p>
-                </div>
-            </div>
-        </header>
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
 
-        <!-- 招生信息 -->
-        <div class="notice">
-            <h2>📢 每年招收2-3名硕士研究生</h2>
-            <p>欢迎对人工智能领域感兴趣的同学联系报考！</p>
-        </div>
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
 
-        <!-- 教学课程 -->
-        <section class="section">
-            <h2>讲授课程</h2>
-            <ul class="course-list">
-                <li>机器学习（研究生课程）</li>
-                <li>人工智能导论（本科生课程）</li>
-                <li>Python程序设计（本科生课程）</li>
-            </ul>
-        </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        <!-- 发表论文 -->
-        <section class="section">
-            <h2>近期论文</h2>
-            <ul class="paper-list">
-                <li>
-                    <div class="paper-title">基于深度学习的图像识别研究</div>
-                    <div class="paper-info">张三, 李四. 《计算机学报》, 2023</div>
-                </li>
-                <li>
-                    <div class="paper-title">多模态数据融合算法研究</div>
-                    <div class="paper-info">王五, 张三. 《人工智能研究》, 2022</div>
-                </li>
-            </ul>
-        </section>
+/* 头部样式 */
+.header {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-        <!-- 联系方式 -->
-        <footer class="footer">
-            <h2>联系方式</h2>
-            <p>📧 zhang.san@university.edu.cn</p>
-            <p>🏢 学院地址：XX大学XX校区计算机学院大楼501室</p>
-        </footer>
-    </div>
-</body>
-</html>
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+.profile-info h1 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* 招生通知 */
+.notice {
+    background: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* 内容区块 */
+.section {
+    background: white;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+}
+
+/* 列表样式 */
+.course-list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.course-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.paper-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.paper-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.paper-info {
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    margin-top: 30px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+}
