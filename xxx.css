@@ -119,3 +119,82 @@ body {
         height: 150px;
     }
 }
+
+/* 教育经历样式 */
+.edu-list {
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+}
+
+.edu-list li {
+    padding: 25px;
+    margin-bottom: 20px;
+    background: #f8f9fa;
+    border-left: 3px solid #007bff;
+    border-radius: 5px;
+    position: relative;
+}
+
+.edu-list li::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 30px;
+    width: 12px;
+    height: 12px;
+    background: #007bff;
+    border-radius: 50%;
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.edu-header h3 {
+    color: #333;
+    font-size: 1.1em;
+    margin-right: 15px;
+}
+
+.edu-time {
+    color: #666;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.edu-school {
+    color: #007bff;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.edu-details p {
+    color: #666;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+    .edu-list {
+        padding-left: 20px;
+    }
+
+    .edu-list li {
+        padding: 15px;
+    }
+
+    .edu-header {
+        flex-direction: column;
+    }
+
+    .edu-time {
+        margin-top: 5px;
+        font-size: 0.85em;
+    }
+}
