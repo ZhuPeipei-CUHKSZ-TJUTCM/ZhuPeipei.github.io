@@ -3,80 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>朱佩佩讲师 - 天津中医药大学</title>
-    <link rel="stylesheet" href="style.css">
+    <title>教师个人主页</title>
+    <link rel="stylesheet" href="xxx.css">
 </head>
 <body>
-    <div class="profile-container">
-        <!-- 头部信息 -->
-        <header class="profile-header">
-            <img src="pp_big.jpeg" alt="朱佩佩讲师" class="profile-avatar">
-            <div class="profile-info">
-                <h1>朱佩佩 讲师</h1>
-                <p class="institute">天津中医药大学 中药制药工程学院</p>
-                <p class="research">研究领域：人工智能、多模态深度学习、中药生产智慧监管</p>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="profile">
+                <img src="pp_big.jpeg" alt="教师照片" class="profile-img">
+                <div class="profile-info">
+                    <h1>朱佩佩 讲师</h1>
+                    <p>天津中医药大学 中药制药工程学院</p>
+                    <p>研究领域：包括但不限于人工智能、多模态深度学习、中药生产智慧监管</p>
+                </div>
             </div>
         </header>
-
-        <!-- 招生公告 -->
-        <div class="admission-notice">
-            <h2>每年招收2-3名硕士研究生</h2>
+        
+        <!-- 招生信息 -->
+        <div class="notice">
+            <h2>📢 每年招收2-3名硕士研究生</h2>
             <p>欢迎对人工智能领域感兴趣的同学联系报考！</p>
         </div>
 
-        <!-- 教育背景 -->
-        <section class="info-section">
-            <div class="section-header">
-                <h3>教育背景</h3>
-            </div>
-            <ul class="timeline-list">
+         <!-- 教育经历 -->
+        <section class="section">
+            <h2>教育背景</h2>
+            <ul class="edu-list">
                 <li>
-                    <div class="timeline-item">
-                        <span class="timeline-year">2018-2023</span>
-                        <div class="timeline-content">
-                            <h4>计算机与信息工程博士</h4>
-                            <p class="school">香港中文大学深圳（QS排名TOP50）</p>
-                            <p class="mentor">导师：陈长汶院士（IEEE Fellow）</p>
-                        </div>
+                    <div class="edu-header">
+                        <h3>计算机与信息工程博士学位 2018-2023</h3>
+                    </div>
+                    <div class="edu-school">香港中文大学深圳（世界排名TOP50）</div>
+                    <div class="edu-details">
+                        <p>导师：
+                            <a href="https://baike.baidu.com/item/陈长汶/1461783" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="school-link"
+                               title="陈长汶院士简介">
+                                陈长汶院士
+                            </a> 
+                            （IEEE Fellow）
+                        </p>
                     </div>
                 </li>
                 <li>
-                    <div class="timeline-item">
-                        <span class="timeline-year">2014-2017</span>
-                        <div class="timeline-content">
-                            <h4>电子与信息工程硕士</h4>
-                            <p class="school">北京邮电大学</p>
-                        </div>
+                    <div class="edu-header">
+                        <h3>电子与信息工程硕士学位</h3>
+                        <div class="edu-time">2014-2017</div>
+                    </div>
+                    <div class="edu-school">北京邮电大学</div>
+                </li>
+                <li>
+                    <div class="edu-header">
+                        <h3>通信工程学位</h3>
+                        <div class="edu-time">2010-2014</div>
+                    </div>
+                    <div class="edu-school">河北工业大学</div>
                     </div>
                 </li>
             </ul>
         </section>
-
-        <!-- 科研项目 -->
-        <section class="info-section">
-            <div class="section-header">
-                <h3>科研项目</h3>
-            </div>
-            <div class="project-list">
-                <div class="project-item">
-                    <h4>基于神经形态视觉的中药生产区域异常行为检测方法研究</h4>
-                    <div class="project-meta">
-                        <span class="project-id">项目编号：2024KJ015</span>
-                        <span class="project-fund">经费：10万元</span>
-                        <span class="project-status">状态：在研</span>
-                    </div>
-                    <p class="project-agency">天津市教育委员会一般项目（2024-2027）</p>
-                </div>
-            </div>
+        
+        <!-- 教学课程 -->
+        <section class="section">
+            <h2>讲授课程</h2>
+            <ul class="course-list">
+                <li>人工智能导论（本科生课程）</li>
+                <li>深度学习（本科生课程）</li>
+                <li>机器视觉（本科生课程）</li>
+                <li>大语言模型（本科生课程）</li>
+            </ul>
         </section>
 
+        <!-- 项目 -->
+        <section class="section">
+             <h2>主持项目</h2>
+            <ul class="paper-list">
+                <li>
+                    <div class="paper-title">天津市教育委员会, 一般项目, 2024KJ015, 基于神经形态视觉的中药生产区域异常行为检测方法研究, 2024-12 至 2027-11, 10万元, 在研, 主持</div>
+                </li>
+            </ul>
+            <h2>参与项目</h2>
+            <ul class="paper-list">
+                <li>
+                    <div class="paper-title">广东省科学技术厅, 重点领域研发计划项目, 2019B010155002, 可敏捷定制的智能视觉处理器及系统应用, 2020-01 至 2023-01, 2000万元, 结题, 参与</div>
+                </li>
+            </ul>
+        </section>
+
+         <!-- 发表论文 -->
+        <section class="section">
+            <h2>近期论文</h2>
+            <ul class="paper-list">
+                <li>
+                    <div class="paper-title">Zhihan Ren; Lijun He; Peipei Zhu; Super-Resolution Learning Strategy Based on Expert Knowledge Supervision, Remote Sensing, 2024, 16(16). (JCR一区，IF=4.2)</div>
+                    <div class="paper-title">Feixiang Liu; Yihan Wen; Jiayi Sun; Peipei Zhu; Liang Mao; Guanchong Niu; Jie Li; Iterative Mamba Diffusion Change-Detection Model for Remote Sensing, Remote Sensing, 2024,
+16(19)。(JCR一区，IF=4.2)</div>
+                    <div class="paper-title">Zhu, P., Wang, X., Zhu, L., Sun, Z., Zheng, W., Wang, Y., & Chen, C. (2023). Prompt-based learning for unpaired image captioning. IEEE Transactions on Multimedia.（SCI一区，IF：8.4）</div>
+                    <div class="paper-title">Zhu, P., Wang, X., Luo, Y., Sun, Z., Zheng, W. S., Wang, Y., & Chen, C. (2022). Unpaired Image Captioning by Image-level Weakly-Supervised Visual Concept Recognition. IEEE Transactions on Multimedia. （SCI一区，IF：8.4）</div>
+                </li>
+              /*   <li>*/
+                  /*  <div class="paper-title">多模态数据融合算法研究</div> */
+                    /*   <div class="paper-info">王五, 张三. 《人工智能研究》, 2022</div> */
+               /*  </li>*/
+            </ul>
+        </section>
+        
+
         <!-- 联系方式 -->
-        <footer class="contact-footer">
-            <h3>联系方式</h3>
-            <div class="contact-info">
-                <p>📧 <a href="mailto:zhupp0527@tjutcm.edu.cn">zhupp0527@tjutcm.edu.cn</a></p>
-                <p>🏢 天津市静海区团泊新城西区鄱阳湖路10号现代中医药海河实验室412室</p>
-            </div>
+        <footer class="footer">
+            <h2>联系方式</h2>
+            <p>📧 zhupp0527@tjutcm.edu.cn</p>
+            <p>🏢 学院地址：天津中医药大学团泊湖校区现代中医药海河实验室大楼412室</p>
         </footer>
     </div>
 </body>
