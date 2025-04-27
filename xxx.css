@@ -1,200 +1,180 @@
 /* 基础样式 */
+:root {
+    --primary-blue: #1e90ff;
+    --secondary-blue: #e3f2fd;
+    --text-dark: #333;
+    --text-light: #666;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Segoe UI', '微软雅黑', sans-serif;
 }
 
 body {
+    background: #f4f4f4;
     line-height: 1.6;
-    color: #333;
-    background-color: #f5f5f5;
 }
 
-.container {
+/* 布局容器 */
+.profile-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* 头部样式 */
-.header {
-    background: #fff;
-    padding: 30px;
+    margin: 2rem auto;
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
 }
 
-.profile {
+/* 头部区域 */
+.profile-header {
     display: flex;
     align-items: center;
-    gap: 30px;
+    padding: 2rem;
+    background: var(--secondary-blue);
 }
 
-.profile-img {
-    width: 200px;
-    height: 200px;
+.profile-avatar {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #007bff;
+    margin-right: 2rem;
+    border: 3px solid var(--primary-blue);
 }
 
 .profile-info h1 {
-    color: #007bff;
-    margin-bottom: 10px;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
 }
 
-/* 招生通知 */
-.notice {
-    background: #007bff;
+.institute {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.research {
+    color: var(--text-light);
+    margin-top: 0.8rem;
+}
+
+/* 招生公告 */
+.admission-notice {
+    background: var(--primary-blue);
     color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px 0;
+    padding: 1.5rem;
     text-align: center;
+    margin: 1rem 0;
 }
 
 /* 内容区块 */
-.section {
-    background: white;
-    padding: 30px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.info-section {
+    padding: 2rem;
+    border-bottom: 1px solid #eee;
 }
 
-.section h2 {
-    color: #007bff;
-    margin-bottom: 20px;
-    border-left: 4px solid #007bff;
-    padding-left: 10px;
+.section-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
-/* 列表样式 */
-.course-list {
+.section-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+}
+
+/* 时间线样式 */
+.timeline-list {
     list-style: none;
-    padding-left: 20px;
+    position: relative;
+    padding-left: 2rem;
 }
 
-.course-list li {
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+.timeline-list li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
 }
 
-.paper-list li {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
+.timeline-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-blue);
+    border-radius: 50%;
 }
 
-.paper-title {
-    font-weight: bold;
-    color: #333;
+.timeline-year {
+    position: absolute;
+    left: -4.5rem;
+    top: 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
 }
 
-.paper-info {
-    color: #666;
-    font-size: 0.9em;
-    margin-top: 5px;
+.timeline-content h4 {
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
 }
 
-/* 页脚 */
-.footer {
+.school, .mentor {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* 项目列表 */
+.project-item {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    color: var(--primary-blue);
+    font-size: 0.9rem;
+}
+
+/* 联系方式 */
+.contact-footer {
+    padding: 2rem;
+    background: var(--secondary-blue);
     text-align: center;
-    padding: 20px;
-    color: #666;
-    margin-top: 30px;
+}
+
+.contact-info a {
+    color: var(--primary-blue);
+    text-decoration: none;
 }
 
 /* 响应式设计 */
 @media (max-width: 768px) {
-    .profile {
+    .profile-header {
         flex-direction: column;
         text-align: center;
     }
-    
-    .profile-img {
-        width: 150px;
-        height: 150px;
-    }
-}
 
-/* 教育经历样式 */
-.edu-list {
-    list-style: none;
-    position: relative;
-    padding-left: 30px;
-}
-
-.edu-list li {
-    padding: 25px;
-    margin-bottom: 20px;
-    background: #f8f9fa;
-    border-left: 3px solid #007bff;
-    border-radius: 5px;
-    position: relative;
-}
-
-.edu-list li::before {
-    content: '';
-    position: absolute;
-    left: -8px;
-    top: 30px;
-    width: 12px;
-    height: 12px;
-    background: #007bff;
-    border-radius: 50%;
-}
-
-.edu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 10px;
-}
-
-.edu-header h3 {
-    color: #333;
-    font-size: 1.1em;
-    margin-right: 15px;
-}
-
-.edu-time {
-    color: #666;
-    font-size: 0.9em;
-    white-space: nowrap;
-}
-
-.edu-school {
-    color: #007bff;
-    font-weight: 500;
-    margin-bottom: 8px;
-}
-
-.edu-details p {
-    color: #666;
-    font-size: 0.95em;
-    line-height: 1.5;
-    margin: 5px 0;
-}
-
-/* 响应式调整 */
-@media (max-width: 576px) {
-    .edu-list {
-        padding-left: 20px;
+    .profile-avatar {
+        margin: 0 0 1.5rem 0;
     }
 
-    .edu-list li {
-        padding: 15px;
+    .timeline-year {
+        position: static;
+        display: block;
+        margin-bottom: 0.5rem;
     }
 
-    .edu-header {
+    .project-meta {
         flex-direction: column;
-    }
-
-    .edu-time {
-        margin-top: 5px;
-        font-size: 0.85em;
+        gap: 0.5rem;
     }
 }
